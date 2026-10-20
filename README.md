@@ -2,8 +2,8 @@
 
 Analysis code of the article:
 
-> Drevet, J., Benjamin, L., Rondot, L., Drugowitsch, J. & Wyart, V. Flexible compression of sensory evidence makes
-> human decisions more resilient to noisy neural computations. [journal, year, DOI to be completed]
+Flexible compression of sensory evidence makes human decisions more resilient to noisy neural computations.
+Drevet, J., Benjamin, L., Rondot, L., Drugowitsch, J. & Wyart, V.  
 
 The code reproduces the statistics and figures of the article from the behavioral data (in this repository), the
 preprocessed MEG data (Zenodo: https://doi.org/10.5281/zenodo.23266592) and recurrent neural networks trained with the provided code.
