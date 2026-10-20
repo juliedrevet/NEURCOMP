@@ -1,0 +1,10 @@
+figs/
+tmp/
+.DS_Store
+*.asv
+MEG_analyses/results/zdec_source/*.mat
+__pycache__/
+.ipynb_checkpoints/
+RNN_analyses/python/rnn_simulations/
+config_paths_local.m
+MEG_analyses/results/zdec_source.zip

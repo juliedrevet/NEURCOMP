@@ -1,0 +1,16 @@
+# Python environment of the RNN analyses (training and analyses notebooks in scripts/), with the
+# versions used for the paper (macOS, Apple silicon; pytorch runs on the CPU, or on a CUDA GPU when available)
+# Create it once:     conda env create -f environment.yml
+# Then before use:    conda activate NEURCOMP
+name: NEURCOMP
+channels:
+  - defaults
+dependencies:
+  - python=3.11.14
+  - numpy=2.3.5
+  - scipy=1.16.3
+  - pytorch=2.5.1
+  - matplotlib=3.10.7
+  - joblib=1.5.3
+  - notebook=7.5.0
+  - ipykernel=6.31.0
