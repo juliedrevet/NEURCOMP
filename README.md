@@ -13,7 +13,7 @@ preprocessed MEG data (Zenodo: https://doi.org/10.5281/zenodo.23266592) and recu
 | Folder | Content | Figures |
 |---|---|---|
 | `data/` | behavioral data of the 37 participants (MATLAB tables): one row per sequence (`data_table_seq.mat`), and the presentations of each sequence in all conditions and repetitions aligned (`data_table_cond.mat`) | |
-| `BEH_analyses/` | behavioral analyses, model fitting, model selection, model and parameter recovery, simulations; the fits are in `results/` | 2, 3, Supp. 2–5 |
+| `BEH_analyses/` | behavioral analyses, model fitting, model selection, model and parameter recovery, simulations; the fits are in `results/` (see its `README.md`) | 2, 3, Supp. 2–5 |
 | `MEG_analyses/` | epoching, sensor- and source-level decoding of the MEG data (see its `README.md`) | 4–6, Supp. 6–10 |
 | `RNN_analyses/` | training and analyses of the recurrent neural networks in Python, statistics and figures in MATLAB (see its `README.md`) | 7, Supp. 11a, 12, 13 |
 | `functions/` | functions shared by the analyses (repeated-measures ANOVA, cluster-based permutation test, ridge decoding, jackknife, ...) | |
@@ -30,7 +30,8 @@ preprocessed MEG data (Zenodo: https://doi.org/10.5281/zenodo.23266592) and recu
   - [VBMC](https://github.com/acerbilab/vbmc) 1.0.12 (model fitting),
   - [FieldTrip](https://www.fieldtriptoolbox.org) 20240115 (epoching),
   - [Brainstorm](https://neuroimage.usc.edu/brainstorm) (source-level maps).
-- Python 3.11 for the recurrent neural networks: conda environment `RNN_analyses/python/environment.yml`.
+- Python 3.11 with PyTorch 2.5.1 (and NumPy, SciPy, Matplotlib, Joblib, Jupyter) for the recurrent neural networks:
+  conda environment `RNN_analyses/python/environment.yml` (PyTorch runs on the CPU, or on a CUDA GPU when available).
 
 ## Setup
 

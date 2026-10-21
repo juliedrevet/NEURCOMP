@@ -43,7 +43,7 @@ cfg_stat.verbose = false;
 nres = 1e4; % number of bootstrap resamples to compute the s.e.m. of the partial correlation
 
 % results of the Python analyses (networks trained without noise)
-respath = fullfile('python','rnn_simulations','RNN_train_PRE_POST',sprintf('sigcat_%d',sigcat));
+respath = fullfile(cfg_path.rnnsim,'RNN_train_PRE_POST',sprintf('sigcat_%d',sigcat));
 
 %% Figure 7b: along training
 load(fullfile(respath,'test_epochs.mat'))
@@ -282,7 +282,7 @@ for irnn = 1:N
     acc_dense = interp1(noise_array,mean(acc(irnn,:,:),3),noise_dense,'pchip');
     diff_dense = interp1(noise_array,acc_diff(irnn,:),noise_dense,'pchip');
     for idata = 1:ndata
-        % closest accuracy over the whole noise range (the accuracy curve may not be monotonic)
+        % closest accuracy over the whole noise range
         [~,imin] = min(abs(acc_dense-perf_humans(idata)));
         sigma_matched(idata,irnn) = noise_dense(imin);
         diff_matched(idata,irnn) = diff_dense(imin);

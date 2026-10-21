@@ -6,6 +6,7 @@ function cfg_path = config_paths()
 %       functions    helper functions shared by the analyses (functions/)
 %       data         behavioral data tables (data/data_table_seq.mat and data/data_table_cond.mat)
 %       results      model fits and simulations (BEH_analyses/results)
+%       rnnsim       results of the RNN simulations saved by the Python notebooks (RNN_analyses/python/rnn_simulations)
 %       megdata      root folder of the MEG data: continuous/ and epochs/
 %       megcont      preprocessed MEG data downloaded from Zenodo: one folder per participant (SXX) with
 %                    the continuous data, the events and the source model
@@ -27,6 +28,7 @@ cfg_path.root      = fileparts(mfilename('fullpath'));
 cfg_path.functions = fullfile(cfg_path.root,'functions');
 cfg_path.data      = fullfile(cfg_path.root,'data');
 cfg_path.results   = fullfile(cfg_path.root,'BEH_analyses','results');
+cfg_path.rnnsim    = fullfile(cfg_path.root,'RNN_analyses','python','rnn_simulations'); % RNN simulations (Python notebooks)
 
 % [local] MEG data: unzip the folders SXX downloaded from Zenodo in cfg_path.megcont (continuous/)
 cfg_path.megdata = '/path/to/MEG_data';

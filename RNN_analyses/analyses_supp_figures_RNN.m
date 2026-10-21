@@ -40,7 +40,7 @@ cfg_stat.seed = 1234;
 cfg_stat.verbose = false;
 
 % results of the Python analyses
-respath = fullfile('python','rnn_simulations','RNN_train_PRE_POST',sprintf('sigcat_%d',sigcat));
+respath = fullfile(cfg_path.rnnsim,'RNN_train_PRE_POST',sprintf('sigcat_%d',sigcat));
 
 %% Noise on the category axis
 % for each participant and each noise level sigcat (0:2:20°, s.d.), the computational model (inference imbalance
