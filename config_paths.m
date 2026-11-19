@@ -34,7 +34,7 @@ cfg_path.rnnsim    = fullfile(cfg_path.root,'RNN_analyses','python','rnn_simulat
 cfg_path.megdata = '/path/to/MEG_data';
 
 % [local] external toolboxes
-cfg_path.bayesfactor = '/path/to/bayesFactor';        % bayesFactor 1.1 (MATLAB File Exchange)
+cfg_path.bayesfactor = '/path/to/bayesFactor';        % bayesFactor 3.0 (MATLAB File Exchange)
 cfg_path.spm12       = '/path/to/spm12';              % SPM12
 cfg_path.vbmc        = '/path/to/vbmc1.0.12';         % VBMC 1.0.12 (added by the fitting scripts)
 cfg_path.fieldtrip   = '/path/to/fieldtrip-20240115'; % FieldTrip 20240115 (added by the epoching script)

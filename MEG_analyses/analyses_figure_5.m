@@ -501,7 +501,7 @@ if plotsource
     idxwin = idxwin_conllr_percond;
     winmin = winmin_conllr_percond;
     winmax = winmax_conllr_percond;
-    for ivar = 3%1:3
+    for ivar = 1:3
         for icond = 1:2
             iwin = round([winmin(icond)*1000,winmax(icond)*1000]);
             switch varnam{ivar}

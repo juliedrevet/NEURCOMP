@@ -2,8 +2,9 @@
 
 Recurrent neural networks trained on the PRE and POST conditions of the task (Figure 7 and Supplementary
 Figures 12 and 13). The networks are trained, tested and decoded in Python (`python/`); the statistics and figures
-are computed in MATLAB from the results exported as `.mat` files. The results are not in the repository: run the
-steps below in order.
+are computed in MATLAB from the results exported as `.mat` files. These results are in the repository
+(`python/rnn_simulations/RNN_train_PRE_POST/sigcat_15/test_*.mat`), so the figures can be plotted directly (step 3).
+The trained networks are not in the repository: to recompute the results, run the steps below in order.
 
 ## 0. Python environment (once)
 

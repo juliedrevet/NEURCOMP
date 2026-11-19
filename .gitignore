@@ -5,6 +5,8 @@ tmp/
 MEG_analyses/results/zdec_source/*.mat
 __pycache__/
 .ipynb_checkpoints/
-RNN_analyses/python/rnn_simulations/
+RNN_analyses/python/rnn_simulations/**
+!RNN_analyses/python/rnn_simulations/**/
+!RNN_analyses/python/rnn_simulations/RNN_train_PRE_POST/sigcat_15/test_*.mat
 config_paths_local.m
 MEG_analyses/results/zdec_source.zip

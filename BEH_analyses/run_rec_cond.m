@@ -1,6 +1,6 @@
 %% run_rec_cond
 % model and parameter recovery for the factorized Bayesian model selection
-% (Supplementary Figure 3a), same models as run_fit_cond:
+% (Supplementary Figure 4a), same models as run_fit_cond:
 %   1. SIMULATION (all participants): one parameter set drawn from the prior distributions,
 %      used to simulate each of the 8 models below on the sequences of the participant,
 %      with nrep simulated datasets per model (one per repetition of the recovery)
@@ -22,7 +22,7 @@
 % irec = 1:ndata*nmodel*nmodel -> (idata, imodsim, imodfit), participant varying fastest, so that
 % irec = 1:ndata are the full model simulated and fitted (parameter recovery).
 %
-% results saved in ./results/tmp/recovery (analysed in analyses_supp.m, Supplementary Figure 3a):
+% results saved in ./results/tmp/recovery (analysed in analyses_supp.m, Supplementary Figure 4a):
 %   results_sim_cond_SXX.mat                       out_sim: 1 x simulated model (nrep simulated datasets in out_sim{.}.r)
 %   results_rec_cond_SXX_imodsimY_imodfitK_repZ.mat out_fit: fit of the dataset irep of model Y with model K
 
@@ -37,7 +37,6 @@ savepath = fullfile(cfg_path.root,'BEH_analyses','results','tmp','recovery'); % 
 
 nrep     = 5;    % simulated datasets per model (repetitions of the recovery)
 irep     = 1;    % repetition to recover (simulated dataset)
-irec2run = 112:296; % fits to run 
 
 % load data table
 load(fullfile(cfg_path.data,'data_table_seq.mat'),'dat');
@@ -56,6 +55,8 @@ isfree = logical([ ...
     0 0 1;   % 7. sigsel
     0 0 0]); % 8. epsi
 nmodel = size(isfree,1);
+
+irec2run = 1:ndata*nmodel*nmodel; % fits to run: all fits
 
 %% 1. SIMULATION (all participants)
 for idata = 1:ndata
